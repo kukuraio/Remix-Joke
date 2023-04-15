@@ -1,6 +1,6 @@
 import { Link } from "@remix-run/react"
 import { db } from "../utils/db.server"
-import {useLoaderData} from '@remix-run/react'            
+import {useLoaderData, useActionData} from '@remix-run/react'            
 
 
 type Data = {
@@ -25,11 +25,12 @@ function HideJoke() {
 
 export default function Joke() {
     const data = useLoaderData()
+    const msg = useActionData()
     
     return (
         <div>
             <h1 className="text-4xl font-extrabold ml-2 mt-10 mb-10">JOKES</h1>
-
+            {msg?.user && <p>{msg.user}</p>}
             <div className="flex justify-around">
            
             <div className="flex flex-col w-[50%]">

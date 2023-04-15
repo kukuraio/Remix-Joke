@@ -59,7 +59,7 @@ export default function New() {
                     </div>
                     <div className="pb-10">
                     <label htmlFor="content" className="">Content:</label> <br />
-                    <input id="content" name="content" type="text-area" className="text-black border-1 border-gray-800 w-[60%] h-[10vh] rounded-md" />
+                    <textarea id="content" name="content" className="text-black border-1 border-gray-800 w-[60%] h-[10vh] rounded-md"></textarea>
                     </div>
                     {data2?.message2 && <p>{data2.message2}</p>}
                     <button type="submit" className="px-4 py-2 bg-blue-900 hover:bg-blue-600 transition">Submit</button>
